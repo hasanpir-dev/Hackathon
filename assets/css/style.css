@@ -34,8 +34,12 @@ main {
   
 
 }
-.main {
+.main_container {
   width: 1220px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
 }
 footer {
   display: flex;
@@ -46,22 +50,42 @@ footer {
 .search {
   width: 446px;
   font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.main__title {
+width: 72px;
+height: 22px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+color: #000000;
+margin-bottom: 28px;
 }
 
 .table_main {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  width: 1185px;
+  margin: 0 auto;
+
 
 }
 
-.table__head {
+.table_head {
   background-color: #FAFAFC;
   height: 36px;
   width: 1185px;
-  
+  display: flex;
+
+  justify-content: space-between;
 
   
+}
+.table_th {
+  width: 250px;
 }
 
 .info {
