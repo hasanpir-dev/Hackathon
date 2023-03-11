@@ -31,14 +31,27 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  
 
+}
+.main {
+  width: 1220px;
+}
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.search {
+  width: 446px;
+  font-size: 14px;
+}
+
+.tabel {
+  width: 1225px;
+
+}
 @media only screen and (min-width: 390px) and (max-width: 767px) {
   /* Styles... */
 }
