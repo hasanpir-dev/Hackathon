@@ -48,10 +48,21 @@ footer {
   font-size: 14px;
 }
 
-.tabel {
+.table_main {
   width: 1225px;
+  background-color: azure;
 
 }
+
+.table__head {
+  background-color: #FAFAFC;
+  
+}
+
+.info {
+  height: 62px;
+}
+
 @media only screen and (min-width: 390px) and (max-width: 767px) {
   /* Styles... */
 }
