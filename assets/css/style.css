@@ -206,7 +206,6 @@ border-radius: 0px;
 
 .order-container__search-box{
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   font-size: 20px;
 }
@@ -225,6 +224,7 @@ border-radius: 0px;
   position: relative;
   display: flex;
   align-items: center;
+  width: 300px;
 }
 
 .search-icon{
@@ -251,5 +251,8 @@ border-radius: 0px;
 }
 
 @media only screen and (min-width: 390px) and (max-width: 767px) {
-  /* Styles... */
+.mobile  {
+  flex-direction: column;
+ }
+
 }
