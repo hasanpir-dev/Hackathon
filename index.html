@@ -36,8 +36,8 @@
           <h2 class="main__title">Qaimələr</h2>
           
           <input placeholder="Qaimə nömrəsi, müştəri adı üzrə axtar" type="text" class="search">
-          <table class="table_main">
-            <thead class="table_head">
+          <table class="table table_main">
+            <!-- <thead class="table_head">
               <tr>
                 <th class="table_th" scope="col">Qaimə №</th>
                 <th class="table_th" scope="col">Müştəri</th>
@@ -45,6 +45,15 @@
                 <th class="table_th" scope="col">Toplam məbləğ</th>
                 <th class="table_th"scope="col">Status</th>
                 <th  class="table_th" scope="col">Əmrlər</th>
+              </tr>
+            </thead> -->
+
+            <thead>
+              <tr>
+                <th class="table_th" scope="col">#</th>
+                <th class="table_th" scope="col">title</th>
+                <th class="table_th" scope="col">price</th>
+                <th class="table_th" scope="col">stock</th>
               </tr>
             </thead>
             <tbody>
@@ -71,7 +80,7 @@
         <div class="order-container">
           <div class="order-container__search-box">
               <div>
-                  <label for="search-client">Clients</label>
+                  <label for="search-client1">Clients</label>
                   <div class="input-container">
                       <img class="search-icon" src="./assets/img/Vector.svg" alt="">
                       <input id="search-client" type="text" class="search-box search-box__search-client">
@@ -108,22 +117,7 @@
       <div class="footer__right"></div>
     </footer>
 
-    <script>
-      const inputs = document.querySelectorAll(".search-box")
-      const inputsIcon = document.querySelectorAll(".search-icon")
-
-      inputs.forEach((item, index) => {
-          item.addEventListener("focus", () => {
-              inputsIcon[index].classList.add("hide")
-          })
-
-          item.addEventListener("blur", () => {
-              if(!item.value.length) {
-                  inputsIcon[index].classList.remove("hide")
-              }
-          })
-      })
-  </script>
+ 
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

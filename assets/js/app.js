@@ -1,9 +1,23 @@
 const tbody =document.querySelector('tbody')
 const thead =document.querySelector('thead')
-const titleValue =document.querySelector('search-client')
-const titlePrice =document.querySelector('search-products')
-const titleStock =document.querySelector('search-stock')
+const titleValue =document.getElementById('search-client')
+const titlePrice =document.getElementById('search-products')
+const titleStock =document.getElementById('search-stock')
 const theadTh =document.querySelectorAll('thead th')
+const inputs = document.querySelectorAll(".search-box")
+const inputsIcon = document.querySelectorAll(".search-icon")
+const addPost = document.getElementById('add-product')
+inputs.forEach((item, index) => {
+    item.addEventListener("focus", () => {
+        inputsIcon[index].classList.add("hide")
+    })
+
+    item.addEventListener("blur", () => {
+        if(!item.value.length) {
+            inputsIcon[index].classList.remove("hide")
+        }
+    })
+})
  const fetchData=()=>{
     fetch(`https://dependable-data-380220-h6ezabenkq-el.a.run.app/api/products`)
 .then(res=>res.json())
@@ -11,11 +25,11 @@ const theadTh =document.querySelectorAll('thead th')
     data.products.forEach(product=>{
     let text =`
     <tr>
-    <th>${product._id.substring(0,2)}</th>
-    <td>${product.title}</td>
-    <td>${product.price}</td>
-    <td>${product.stock}</td>
-    <td><button onclick='deleteItem("${product._id}")'>delete</button></td>
+    <th class="table_th" >${product._id.substring(0,2)}</th>
+    <td class="table_th" >${product.title}</td>
+    <td class="table_th" >${product.price}</td>
+    <td class="table_th" >${product.stock}</td>
+    <td class="table_th" ><button onclick='deleteItem("${product._id}")'>delete</button></td>
     
   </tr>
     `
@@ -33,12 +47,14 @@ function deleteItem (id){
     }
     );  
 }
+debugger;
 
-
+console.log('e')
+addPost.addEventListener('click', postData)
 async function postData(url = `https://dependable-data-380220-h6ezabenkq-el.a.run.app/api/products/`, data = {_id: Math.random(),
-title:titleValue,
-titlePrice: titlePrice,
-stock:titleStock
+title:titleValue.innerText,
+price: titlePrice.innerText,
+stock:titleStock.innerText
 }) {
     const response = await fetch(url, {
       method: "POST",
@@ -47,8 +63,7 @@ stock:titleStock
       }, 
       body: JSON.stringify(data), 
     });
-    return response.json(); 
+    fetchData() 
+      console.log('asdas')
   }
-  
-
   

@@ -152,8 +152,7 @@ height: 16px;
 
    align-items: center;
    flex-direction: column;
-
-
+  display: none !important;
 }
 .success__page-button{
    border: none;
