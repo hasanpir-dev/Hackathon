@@ -2,11 +2,13 @@ const tbody =document.querySelector('tbody')
 const thead =document.querySelector('thead')
 const titleValue =document.getElementById('search-client')
 const titlePrice =document.getElementById('search-products')
-const titleStock =document.getElementById('search-stock')
+const titleStock =document.getElementById('search-stock_new')
 const theadTh =document.querySelectorAll('thead th')
 const inputs = document.querySelectorAll(".search-box")
 const inputsIcon = document.querySelectorAll(".search-icon")
 const addPost = document.getElementById('add-product')
+
+console.log(titleStock)
 inputs.forEach((item, index) => {
     item.addEventListener("focus", () => {
         inputsIcon[index].classList.add("hide")
@@ -47,21 +49,21 @@ function deleteItem (id){
     }
     );  
 }
-debugger;
 
+const data_new = {_id: Math.random(),
+  title:titleValue.value,
+  price: titlePrice.value,
+  stock: titleStock.value
+  }
 console.log('e')
 addPost.addEventListener('click', postData)
-async function postData(url = `https://dependable-data-380220-h6ezabenkq-el.a.run.app/api/products/`, data = {_id: Math.random(),
-title:titleValue.innerText,
-price: titlePrice.innerText,
-stock:titleStock.innerText
-}) {
+async function postData(url = `https://dependable-data-380220-h6ezabenkq-el.a.run.app/api/products/`, ) {
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       }, 
-      body: JSON.stringify(data), 
+      body: JSON.stringify(data_new), 
     });
     fetchData() 
       console.log('asdas')
