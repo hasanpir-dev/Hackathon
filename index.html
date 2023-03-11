@@ -73,10 +73,53 @@
           <p >Qaimə əməliyyatınız uğurla tamamlanmışdır!</p>
       </div>
       </section>
+      <section>
+        <div class="order-container">
+          <div class="order-container__search-box">
+              <div>
+                  <label for="search-client">Clients</label>
+                  <div class="input-container">
+                      <img class="search-icon" src="./assets/img/Vector.svg" alt="">
+                      <input id="search-client" type="text" class="search-box search-box__search-client">
+                  </div>
+              </div>
+              <div>
+                  <label for="search-products">Products</label>
+                  <div class="input-container">
+                      <img class="search-icon"s src="./assets/img/Vector.svg" alt="">
+                      <input id="search-products" type="text" class="search-box search-box__search-product">
+                      <button id="add-product" class="search-add-btn" type="button">+</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="order-container__order-list">
+              
+          </div>
+      </div>
+      
+      </section>
     </main>
     <footer>
       <div class="footer__left"></div>
       <div class="footer__right"></div>
     </footer>
+
+    <script>
+      const inputs = document.querySelectorAll(".search-box")
+      const inputsIcon = document.querySelectorAll(".search-icon")
+
+      inputs.forEach((item, index) => {
+          item.addEventListener("focus", () => {
+              inputsIcon[index].classList.add("hide")
+          })
+
+          item.addEventListener("blur", () => {
+              if(!item.value.length) {
+                  inputsIcon[index].classList.remove("hide")
+              }
+          })
+      })
+  </script>
   </body>
 </html>
