@@ -86,7 +86,13 @@ margin-bottom: 28px;
 }
 .table_th {
   width: 250px;
+align-items: center;
+padding: 0px;
+width: 250px;
+height: 16px;
+
 }
+
 
 .info {
   height: 62px;
