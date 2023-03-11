@@ -49,13 +49,18 @@ footer {
 }
 
 .table_main {
-  width: 1225px;
-  background-color: azure;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
 }
 
 .table__head {
   background-color: #FAFAFC;
+  height: 36px;
+  width: 1185px;
+  
+
   
 }
 
