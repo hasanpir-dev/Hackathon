@@ -34,6 +34,15 @@ main {
   
 
 }
+
+.loft {
+  margin-right: 58px;
+}
+.section_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .main_container {
   width: 1220px;
   display: flex;
@@ -51,6 +60,7 @@ footer {
   width: 446px;
   font-size: 14px;
   margin-bottom: 32px;
+  padding: 10px;
 }
 
 .main__title {
@@ -97,6 +107,38 @@ height: 16px;
 .info {
   height: 62px;
 }
+
+.side-bar{ 
+  border-radius: 16px; 
+  height: 938px; 
+  width: 98px; 
+  background-color:#266AEB; 
+  margin-top: 32px; 
+  margin-left: 30px; 
+} 
+ 
+.side-bar-list img{ 
+  height: 28px; 
+  width: 28px; 
+} 
+ 
+.side-bar-logo{ 
+  height: 40px; 
+  width: 40px; 
+  padding-top: 40px; 
+  margin: auto; 
+} 
+ 
+.side-bar-list{ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding-top: 120px; 
+} 
+ 
+.side-bar-list ul{ 
+  margin: 12px; 
+} 
 
 @media only screen and (min-width: 390px) and (max-width: 767px) {
   /* Styles... */
